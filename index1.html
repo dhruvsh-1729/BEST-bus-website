@@ -18,6 +18,7 @@
         background-color: black ;
         height: 4500px;
         background: url(images/navbar.jpg);
+        /* background-repeat: none ; */
         /* background-repeat: no-repeat; */
         }   
 
@@ -25,7 +26,7 @@
             /* border: 2px solid red; */
             position: absolute;
             top:220px;
-            right:50px;
+            right:30px;
             padding: 30px;
             margin: auto;
             }
@@ -38,26 +39,27 @@
                 /* border: 2px solid red; */
                 display:inline-block;
                 position: absolute;
-                top:15px;
+                top:30px;
                 left:34px;
                 cursor: pointer;
-                font-size: 15px;
+                font-size: 10px;
             }
             
             .mid{
                 /* border: 2px solid green; */
                 display:block;
                 background: rgb(189, 30, 30);
-                width: 50%;
+                width: 100%;
+                height:70px;
                 margin: 30px auto;
                 padding: 5px 5px;
                 border-radius: 10px;
             }
             .right{
                 position: absolute;
-                top: 50px;
+                top: 45px;
                 right:60px;
-                background-color: grey;
+                background-color: rgb(189, 30, 30);
                 display:inline-block;
                 padding: 8px 16px;
                 font-size: 15px;
@@ -67,11 +69,13 @@
             .navbar li{
                 display:inline-block;
                 font-size: 19px;
-                padding: 5px 25px;
+                padding: 5px 15px;
                 border-radius: 10px;
             }
 
             .navbar li a{
+                position:relative;
+                left:90px;
                 color:white;
                 text-decoration: none;
                 text-align: center;
@@ -85,17 +89,21 @@
             }
 
             .left img{
-                width: 150px;
+                position:relative;
+                top:15px;
+                width: 60px;
             }
 
             .left div{
                 text-align: center;
                 font-family: 'Baloo Bhai 2', cursive;
+                position:relative;
+                top:15px;
 
             }
 
             .left div:hover{
-                color:grey;
+                color:rgb(185, 174, 174);
             }
             .btn{
                 margin: 0px 9px;
@@ -105,7 +113,10 @@
                 border-radius: 10px;
                 cursor:pointer;
                 font-family: 'Baloo Bhai 2', cursive;
+            }
 
+            .btn:hover{
+                color:rgb(137, 127, 199);
             }
 
             .catchy{
@@ -124,16 +135,103 @@
                 display:block;
                 width:100%;
                 /* border:2px solid white; */
-                top: 40px;
+                top: 20px;
                 height:25px;
-                font-size: 20px;
+                font-size: 25px;
                 font-family: 'Baloo Bhai 2', cursive;
             }
             .mark marquee{
-                font-weight: bold;
+                font-weight: bolder;
             }
+           
             .mark marquee:hover{
                 color:rgb(196, 182, 182);
+            }
+
+            .container{
+                position: relative;
+                display:block;
+                margin: 3px auto;
+                top:650px;
+                background-color: rgb(189, 30, 30);
+                width:100%;
+                border-radius: 10px;
+                height: 200px;
+            }
+            .footer{
+                text-align: center;
+                font-family: 'Baloo Bhai 2', cursive;
+            }
+
+            .tourism{
+                /* border:2px solid white; */
+                position:relative;
+                top:680px;
+                margin: auto;
+            }
+
+            #Tourism{
+                text-align: center;
+                font-family: 'Baloo Bhai 2', cursive;
+                font-size: 30px;
+                border:2px solid white;
+                display:block;
+                margin: 5px 20px 5px 20px;
+                border-radius: 10px;
+                padding: 0px;
+                font-weight: bolder;
+                background-color: rgb(189, 30, 30);
+            }
+
+            #imageOfPlace{
+            position: absolute;
+            top: 250px; right: 40px;
+            }
+
+            #imageOfPlace img{
+                border:4px solid white;
+            border-radius: 45px;
+            width:730px;
+            }
+
+            #nameOfPlace{
+                position:relative;
+                top:70px;
+                left: 20px;
+                width:450px;
+                font-family: 'Baloo Bhai 2', cursive;
+                font-size:32px;
+                text-align: center;
+                font-size: 70px;
+
+            }
+
+            @keyframes bigger{
+            from{
+                color:white;
+                /* font-size: 70px; */
+            }
+            to{
+                color:grey;
+                /* font-size:80px; */
+            }
+            }
+
+            #nameOfPlace:hover{
+                cursor:pointer;
+                animation-name:bigger;
+                animation-duration: 2s;
+            } 
+
+            #content{
+                position:relative;
+                top:70px;
+                width:450px;
+                padding: 20px;
+                font-family: 'Baloo Bhai 2', cursive;
+                font-size:32px;
+                text-align: center;
+                font-size: 20px;
             }
     </style>
 
@@ -142,7 +240,7 @@
     <div class="header">
         <div class="left">
             <img src="images/best.png">
-            <div>BEST Undertaking</div>
+            <!-- <div>BEST Undertaking</div> -->
         </div>
         <div class="mid">
             <ul class="navbar">
@@ -159,14 +257,39 @@
         </div>
     </div>
     <div class="mark">
-        <marquee>The new Electric AC Double Decker Buses from Switch Mobility are operational now!</marquee> 
+        <marquee><span>Namaskar! The new Electric AC Double Decker Buses from Switch Mobility are operational now!</span>
+            <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Use Chalo Mobile App to book your tickets online!</span>
+        </marquee>
+      
     </div>
     <div class="catchy">
-        <h1>Experience the best public transit in Mumbai city!</h1>
+        <h1>"Experience the best public transit in Mumbai city!"</h1>
     </div>
     <div class="image">
         <img src="images/bus.webp">
     </div>
+
+    <div class="tourism">
+        <div id="Tourism">
+            <h1>Tourism in Mumbai</h1>
+        </div>
+        <div id="nameOfPlace">
+            "Gateway of India"
+        </div>
+        <div id="content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ducimus voluptatem ad. Sed, vero incidunt ex a maiores, iusto, dolor dolorem archi
+            tecto ipsum asperiores totam quidem fugiat suscipit quam nulla.
+        </div>
+
+        <div id="imageOfPlace">
+            <img src="images/goi.jpg">
+        </div>
+    </div>
+    <!-- <footer class="container">
+        <div class="footer">
+            <h1>BEST Undertaking</h1> 
+        </div>
+    </footer> -->
 
     
 </body>
